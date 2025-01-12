@@ -52,7 +52,8 @@ Ne vous appropriez pas, ne copiez pas et ne modifiez pas ce travail de manière 
 [REJOINDRE LE DISCORD MOD](https://discord.gg/8j2suEE9Mf)
 
 Credit texte : @aarnow
-![GitHub all releases](https://img.shields.io/github/downloads/emilenkz/eventtools_nkz/total?style=plastic&label=Downloads&color=gold)
+
+![GitHub all releases](https://img.shields.io/github/downloads/emilenkz/NL_Radio/total?style=plastic&label=Downloads&color=gold)
 
 ---
 
