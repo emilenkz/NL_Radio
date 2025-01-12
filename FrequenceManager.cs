@@ -360,7 +360,7 @@ namespace NL_Radio
                 {
                     int playersConnected = RadioManager.GetPlayerCountInFrequency(element.Id);
 
-                    panel.AddTabLine($"{Color($"{ReturnTextWithOccurence(element.Name, input, Colors.Orange)}", Colors.Info)}", $"{mk.Size($"{(element.IsPrivate ? "Privé" : "Public")}<br>{Color($"{NL_Radio.RadioManager.GetPlayerCountInFrequency(element.Id)} / {element.MaxSlot} ", Colors.Info)}", 14)}", ItemUtils.GetIconIdByItemId(1816), (ui) =>
+                    panel.AddTabLine($"{Color($"{ReturnTextWithOccurence(element.Name, input, Colors.Orange)}", Colors.Info)}", $"{mk.Size($"{(element.IsPrivate ? "Privé" : "Public")}<br>{Color($"{playersConnected} / {element.MaxSlot} ", Colors.Info)}", 14)}", ItemUtils.GetIconIdByItemId(1816), (ui) =>
                     {
                         RadioState state = RadioManager.GetRadioState(player);
                         if (state.Frequency == element.Id)
@@ -369,17 +369,14 @@ namespace NL_Radio
                             panel.Refresh();
                             return;
                         }
-                        if (RadioManager.GetPlayerCountInFrequency(element.Id) >= element.MaxSlot)
+                        if (playersConnected >= element.MaxSlot && !player.setup.isAdminService)
                         {
                             player.Notify("Radio", "Le nombre maximal de joueurs a été atteint.", NotificationManager.Type.Error);
                             panel.Refresh();
                             return;
                         }
-
-                        if (element.IsPrivate) //&& !player.IsAdmin
-                        {
+                        if (element.IsPrivate && !player.setup.isAdminService)
                             TryToConnectPlayer(player, element);
-                        }
                         else
                         {
                             NL_Radio.RadioManager.ConnectPlayerToFrequency(player, element.Id);
