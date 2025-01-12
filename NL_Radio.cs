@@ -92,7 +92,7 @@ namespace NL_Radio
                 state.IsActive = false;
                 state.Frequency = 0;
                 RadioManager.SetRadioState(player, state);
-                player.setup.voice.TargetClearPhone();
+                VoiceUtils.DisconnectAllPlayerVoices(player);
 
                 player.Notify("Radio", "Radio désactivée !");
                 panel.Refresh();
@@ -146,7 +146,6 @@ namespace NL_Radio
 
                         state.Frequency = 0;
                         RadioManager.SetRadioState(player, state);
-
                         VoiceUtils.DisconnectAllPlayerVoices(player);
                         panel.Refresh();
                     });
