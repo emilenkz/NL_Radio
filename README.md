@@ -1,7 +1,7 @@
 ![](https://i.ibb.co/wwZ7BtH/Copie-de-NL-BANK-2.png) 
 
 # 📻 **NL_Radio**
-NL_Radio est un plugin qui ajoute un système de communication radio en jeu, offrant une alternative aux applications comme Zello ou Teamspeak. Profitez d'une expérience immersive avec la gestion de canaux de radio personnalisés pour chaque situation.
+NL_Radio est un plugin qui ajoute un système de communication radio en jeu, offrant une alternative aux applications comme Zello ou Teamspeak. 
 
 **Le plugin nécessite la dernière version de MODKIT, à installer [ICI](https://github.com/Aarnow/NovaLife_ModKit-Releases/releases/latest).**
 
